@@ -1,0 +1,44 @@
+<%- include("template/header" ) %>
+
+    <div class="container-sm my-container">
+
+        <h1 class="text-center">Create a new doctor</h1>
+
+        <form action="/newDoctor" class="my-2" method="POST">
+            <div class="mb-3">
+                <label for="firstNameInput" class="form-label"><h5 class="h5">First Name</h5></label>
+                <input type="text" placeholder="Write your first name" class="form-control" name="firstName" id="firstNameInput" required>
+            </div>
+            <div class="mb-3">
+                <label for="lastNameInput" class="form-label"><h5 class="h5">Last Name</h5></label>
+                <input type="text" placeholder="Write your last name" class="form-control" name="lastName" id="lastNameInput" required>
+            </div>
+            <div class="mb-3">
+                <label for="specialtySelect" class="form-label"><h5 class="h5">Specialty Select</h5></label>
+                <select id="specialtySelect" class="form-select" name="specialty" required>
+                  <option>Medicina general</option>
+                  <option>Cardiologia</option>
+                  <option>Medicina interna</option>
+                  <option>Dermatologia</option>
+                  <option>Rehabilitacion fisica</option>
+                  <option>Psicologia</option>
+                  <option>Odontologia</option>
+                  <option>Radiologia</option>
+                </select>
+              </div>
+            <div class="mb-3">
+                <label for="officeInput" class="form-label"><h5 class="h5">Office</h5></label>
+                <input type="number" placeholder="Write your office number" class="form-control" name="office" id="officeInput" required>
+            </div>
+            <div class="mb-3">
+              <label for="inputEmail" class="form-label"><h5 class="h5">Email</h5></label>
+              <input type="email" placeholder="Write your email" class="form-control" id="inputEmail" aria-describedby="emailHelp" name="email" required>
+              <div id="emailHelp" class="form-text"></div>
+            </div>
+            <button type="submit" class="btn btn-dark btn-lg">Submit</button>
+        </form>
+
+    </div>
+
+
+<%- include("template/footer") %>

@@ -1,0 +1,50 @@
+<%- include("template/header") %>
+
+  <div class="container-sm my-container">
+
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Identification Number</th>
+          <th scope="col">Age</th>
+          <th scope="col">Phone Number</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <% if (users.length> 0) { %>
+          <% users.forEach(user=> { %>
+
+            <tr>
+              <td>
+                <%= user.firstName + ' ' + user.lastName %>
+              </td>
+              <td>
+                <%= user.idNumber %>
+              </td>
+              <td>
+                <%= user.age %>
+              </td>
+              <td>
+                <%= user.phoneNumber %>
+              </td>
+              <td>
+                <a class="btn btn-danger btn-sm" href="user/<%= user.id %>/?type=delete" data-id="<%= user.id %>">
+                  Delete
+                </a>
+                <a class="btn btn-warning btn-sm" href="user/<%= user.id %>/?type=edit"  data-id="<%= user.id %>">
+                  Edit
+                </a>
+              </td>
+            </tr>
+
+            <% }) %>
+              <% } %>
+
+      </tbody>
+    </table>
+
+  </div>
+
+<%- include("template/footer") %>

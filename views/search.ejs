@@ -1,0 +1,33 @@
+<%- include("template/header") %>
+
+    <div class="container-sm my-container">
+
+        <h1 class="text-center">Search and filter</h1>
+        <h3 class="h3">Search</h3>
+
+        <form action="/userAppointments" id="search">
+            <label for="idInput" class="form-label"><h6 class="h6">User Identification</h6></label>
+            <input type="number" class="form-control my-2" name="idNumber" id="idInput">
+            <button class="btn btn-dark btn-lg" onclick="search()">Search</button>
+        </form>
+        <br><br>
+        <h3 class="h3">Filter</h3>
+        <form action="/specialtyAppointments" id="filter">
+            <div class="mb-3">
+                <label for="specialtySelectInput" class="form-label"><h6 class="h6">Specialty Select</h6></label>
+                <select class="form-select" name="specialty" id="specialtySelectInput">
+                    <% specialties.forEach(specialty => { %>
+                        <option><%= specialty %></option>           
+                    <% }) %>
+                </select>
+            </div>
+            <button class="btn btn-dark btn-lg" onclick="filter()">Filter</button>
+        </form>
+        
+    <p id="message"></p>
+
+    </div>
+
+    <script src="/js/search.js"></script>
+
+<%- include("template/footer") %>

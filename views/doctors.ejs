@@ -1,0 +1,51 @@
+<%- include("template/header") %>
+
+<div class="container-sm my-container">
+
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Specialty</th>
+          <th scope="col">Office</th>
+          <th scope="col">Email</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <% if (doctors.length> 0) { %>
+          <% doctors.forEach(doctor => { %>
+
+            <tr>
+              <td>
+                <%= doctor.firstName + ' ' + doctor.lastName %>
+              </td>
+              <td>
+                <%= doctor.specialty %>
+              </td>
+              <td>
+                <%= doctor.office %>
+              </td>
+              <td>
+                <%= doctor.email %>
+              </td>
+              <td>
+                <a class="btn btn-danger btn-sm" href="doctor/<%= doctor.id %>/?type=delete" data-id="<%= doctor.id %>">
+                  Delete
+                </a>
+                <a class="btn btn-warning btn-sm" href="doctor/<%= doctor.id %>/?type=edit"  data-id="<%= doctor.id %>">
+                  Edit
+                </a>
+              </td>
+            </tr>
+
+            <% }) %>
+              <% } %>
+
+      </tbody>
+    </table>
+    
+  </div>
+
+  <%- include("template/footer") %>
+

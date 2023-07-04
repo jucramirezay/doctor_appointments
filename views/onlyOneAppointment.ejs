@@ -1,0 +1,49 @@
+<%- include("template/header") %>
+
+    <div class="container-sm my-container">
+        <% if (error) { %>
+                <a href="/appointments" class="btn btn-dark btn-block my-2">
+                    Return
+                </a>
+        <% } else {%>
+            <% if (type == 'delete') { %>
+                <h1>Delete Appointment</h1>
+                <br>
+                <h5><%= msg %></h5>
+                <br>
+                <button class="btn btn-danger btn-lg" data-id="<%= appointment.id %>" onclick="deleteFunction(type = 'appointment')">Delete</button>
+            <% } else if(type == 'edit') {%>
+                <h1>Edit Appointment</h1>
+                <br>
+                <h4><%= msg %></h4>
+                <br>
+                <form id="edit" data-id="<%= appointment.id %>">
+                    <div class="mb-3">
+                        <% optionsArray = ['Medicina general', 'Cardiologia', 'Medicina interna', 'Dermatologia', 'Rehabilitacion fisica', 
+                        'Psicologia', 'Odontologia', 'Radiologia'] %>
+                        <label for="specialtySelectInput" class="form-label">Specialty Select</label>
+                        <select class="form-select" name="specialty" id="specialtySelectInput">
+                        <% optionsArray.forEach(specialty => { %>
+                            <% if(specialty == appointment.specialty) { %>
+                                <option selected><%= appointment.specialty %></option>
+                            <% } else { %>
+                                <option><%= specialty %></option>
+                            <% } %>            
+                        <% }) %>
+                        </select>
+                    </div>
+                    <button class="btn btn-warning btn-lg" data-id="<%= appointment.id %>" onclick="editAppointment()">
+                        Edit
+                    </button>
+                </form>
+            <% } %>
+        <% } %>
+
+        <p id="message"></p>
+    </div>
+
+<script src="/js/delete.js"></script>
+<script src="/js/edit.js"></script>
+
+
+<%- include("template/footer") %>

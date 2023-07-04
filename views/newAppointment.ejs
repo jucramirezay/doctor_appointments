@@ -1,0 +1,15 @@
+<%- include("template/header") %>
+
+    <div class="container-sm my-container">
+        <h1 class="text-primary">Appointment Web Page</h1>
+        <h4>
+            <%= description %>
+        </h4>
+        <ul>
+            <li>User Identification: <%= idNumberUser %></li>
+            <li>Doctor Specialty: <%= specialty %></li>
+        </ul>
+        <a href="/addAppointment"><button class="btn btn-dark btn-lg">Return</button></a>
+    </div>
+
+<%- include("template/footer") %>

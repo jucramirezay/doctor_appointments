@@ -1,0 +1,53 @@
+<%- include("template/header") %>
+
+    <div class="container-sm my-container">
+        <% if (error) { %>
+                <a href="/users" class="btn btn-dark btn-block my-2">
+                    Return
+                </a>
+        <% } else {%>
+            <% if (type == 'delete') { %>
+                <h1>Delete User</h1>
+                <br>
+                <h5><%= msg %></h5>
+                <br>
+                <button class="btn btn-danger btn-lg" data-id="<%= user.id %>" onclick="deleteFunction(type = 'user')">Delete</button>
+            <% } else if(type == 'edit') {%>
+                <h1>Edit User</h1>
+                <br>
+                <h4><%= msg %></h4>
+                <br>
+                <form id="edit" data-id="<%= user.id %>">
+                    <div class="mb-3">
+                        <label for="firstNameInput" class="form-label"><h5 class="h5">First Name</h5></label>
+                        <input type="text" value="<%= user.firstName %>" class="form-control my-2" name="firstName" id="firstNameInput">
+                    </div>
+                    <div class="mb-3">
+                        <label for="lastNameInput" class="form-label"><h5 class="h5">Last Name</h5></label>
+                        <input type="text" value="<%= user.lastName %>" class="form-control my-2" name="lastName" id="lastNameInput">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label"><h5 class="h5">Identification Number (You cannot change this value*)</h5></label><br>
+                        <label class="form-label"><strong><%= user.idNumber %></strong></label><br>
+                    </div>
+                    <div class="mb-3">
+                        <label for="ageInput" class="form-label"><h5 class="h5">Age</h5></label>
+                        <input type="number" value="<%= user.age %>" class="form-control my-2" name="age" id="ageInput">
+                    </div>
+                    <div class="mb-3">
+                        <label for="phoneNumberInput" class="form-label"><h5 class="h5">Phone Number</h5></label>
+                        <input type="number" value="<%= user.phoneNumber %>" class="form-control my-2" name="phoneNumber" id="phoneNumberInput">
+                    </div>
+                        <button class="btn btn-warning btn-lg" data-id="<%= user.id %>" onclick="editUser()">Edit</button>
+                </form>
+            <% } %>
+        <% } %>
+
+        <p id="message"></p>
+    </div>
+
+<script src="/js/delete.js"></script>
+<script src="/js/edit.js"></script>
+
+
+<%- include("template/footer") %>

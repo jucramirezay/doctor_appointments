@@ -1,0 +1,30 @@
+<%- include("template/header" ) %>
+
+    <div class="container-sm my-container">
+
+        <% if(type == 'search')  { %>
+            <h2>The user you have searched has the next appointments</h2>
+            <% if (status) { %>
+                <h6>User identified with Identification number <%= selector %> has <%= element.length %> appoinments</h6> 
+                <% element.forEach( user =>  { %>
+                    <p><%= user.idNumberUser %>: <%= user.specialty %></p>
+                <% }) %>    
+            <% } else { %>
+                <h6><%= element %></h6>
+            <% } %>
+        <% } else if(type == 'filter') { %>
+            <h2>The specialty you have filter has the next appointments</h2>
+            <% if (status) { %>
+                <h6>Specialty <%= selector %> has <%= element.length %> appoinments</h6> 
+                <% element.forEach( specialty =>  { %>
+                    <p><%= specialty.idNumberUser %>: <%= specialty.specialty %></p>
+                <% }) %>    
+            <% } else { %>
+                <h6><%= element %></h6>
+            <% } %>
+        <% } %>
+        <a href="/searchAppointments"><button class="btn btn-dark btn-lg">Return</button></a>
+    </div>
+    
+
+<%- include("template/footer") %>

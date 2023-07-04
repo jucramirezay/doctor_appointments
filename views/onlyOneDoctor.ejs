@@ -1,0 +1,64 @@
+<%- include("template/header") %>
+
+    <div class="container-sm my-container">
+         
+        <% if (error) { %>
+                <a href="/doctors" class="btn btn-dark btn-block my-2">
+                    Return
+                </a>
+        <% } else {%>
+            <% if (type == 'delete') { %>
+                <h1>Delete Doctor</h1>
+                <br>
+                <h5><%= msg %></h5>
+                <br>
+                <button class="btn btn-danger btn-lg" data-id="<%= doctor.id %>" onclick="deleteFunction(type = 'doctor')">Delete</button>
+            <% } else if(type == 'edit') {%>
+                <h1>Edit Doctor</h1>
+                <br>
+                <h4><%= msg %></h4>
+                <br>
+                <form id="edit" data-id="<%= doctor.id %>">
+                    <div class="mb-3">
+                        <label for="firstNameInput" class="form-label"><h5 class="h5">First Name</h5></label>
+                        <input type="text" value="<%= doctor.firstName %>" class="form-control my-2" name="firstName" id="firstNameInput">
+                    </div>
+                    <div class="mb-3">
+                        <label for="lastNameInput" class="form-label"><h5 class="h5">Last Name</h5></label>
+                        <input type="text" value="<%= doctor.lastName %>" class="form-control my-2" name="lastName" id="lastNameInput">
+                    </div>
+                    <div class="mb-3">
+                        <% optionsArray = ['Medicina general', 'Cardiologia', 'Medicina interna', 'Dermatologia', 'Rehabilitacion fisica', 
+                        'Psicologia', 'Odontologia', 'Radiologia'] %>
+                        <label for="specialtySelectInput" class="form-label"><h5 class="h5">Specialty Select</h5></label>
+                        <select class="form-select" name="specialty" id="specialtySelectInput">
+                        <% optionsArray.forEach(specialty => { %>
+                            <% if(specialty == doctor.specialty) { %>
+                                <option selected><%= doctor.specialty %></option>
+                            <% } else { %>
+                                <option><%= specialty %></option>
+                            <% } %>            
+                        <% }) %>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="officeInput" class="form-label"><h5 class="h5">Office</h5></label>
+                        <input type="number" value="<%= doctor.office %>" class="form-control my-2" name="office" id="officeInput">
+                    </div>
+                    <div class="mb-3">
+                        <label for="emailInput" class="form-label"><h5 class="h5">Email</h5></label>
+                        <input type="email" value="<%= doctor.email %>" class="form-control my-2" name="email" id="emailInput">
+                    </div>
+                    <button class="btn btn-warning btn-lg" data-id="<%= doctor.id %>" onclick="editDoctor()">Edit</button>
+                </form>
+            <% } %>
+        <% } %>
+
+        <p id="message"></p>
+    </div>
+
+    <script src="/js/delete.js"></script>
+    <script src="/js/edit.js"></script>
+
+
+<%- include("template/footer") %>
