@@ -61,7 +61,8 @@ Se crean las siguientes carpetas (con una breve explicación de su contenido)
 1. Clonar el repositorio con el siguiente comando
 
 ```
-git clone 
+git clone https://github.com/jucramirezay/doctor_appointments.git
+cd doctor_appointments
 ```
 
 2. Instalar los paquetes requeridos
