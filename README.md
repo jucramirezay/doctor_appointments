@@ -231,7 +231,7 @@ Se pueden filtrar las citas por medio de la especialidad.
 
 Si no existen citas con la especialidad indicada, el formulario de filtro no tendra las otras especialidades, por ejemplo, solamente hay una cita con la especialidad medicina interna, el formulario mostrara solamente dicha especialidad.
 
-![Desplegable de selección para el filtro](documentacion/filter_3.PNG)
+![Desplegable de selección para el filtro](documentacion/filter_3.png)
 
 
 ## Información personal
