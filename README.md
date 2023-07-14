@@ -152,86 +152,86 @@ Se intenta crear una cita para un usuario existente pero una especialidad inexis
 ### Eliminar un doctor
 Se puede eliminar un doctor por medio del botón "delete" que se encuentra en la lista de todos los doctores
 
-![Delete Doctor](documentacion/delete_doctor.png)
+![Delete Doctor](documentacion/delete_doctor.PNG)
 
 Si solamente hay un doctor con esa especialidad, todas las citas que tengan esa especialidad también serán eliminadas. En caso de que hayan mas doctores con esa especialidad, las citas se mantendran.
 
-![Citas actuales](documentacion/current_appointments.png)
+![Citas actuales](documentacion/current_appointments.PNG)
 
-![Se va a eliminar el doctor que tiene la especialidad de odontologia](documentacion/delete_doctor_odonto.png)
+![Se va a eliminar el doctor que tiene la especialidad de odontologia](documentacion/delete_doctor_odonto.PNG)
 
 Una vez se elimina el doctor con la especialidad única, la cita asociada a ese doctor ya no existe ni el doctor tampoco.
 
-![Doctor Eliminado](documentacion/doctor_deleted.png)
+![Doctor Eliminado](documentacion/doctor_deleted.PNG)
 
-![Cita eliminada con especialidad de odontologia](documentacion/appointment_deleted.png)
+![Cita eliminada con especialidad de odontologia](documentacion/appointment_deleted.PNG)
 
 ### Eliminar un usuario
 Se puede eliminar un usuario por medio del botón "delete" que se encuentra en la lista de todos los usuarios
 
-![Delete User](documentacion/delete_doctor.png)
+![Delete User](documentacion/delete_doctor.PNG)
 
 Una vez se elimina el usuario, también serán eliminadas las citas asociadas a dicho usuario.
 
-![Citas actuales](documentacion/current_appointments_2.png)
+![Citas actuales](documentacion/current_appointments_2.PNG)
 
-![Se va a eliminar el usuario con documento 76859412](documentacion/delete_user_2.png)
+![Se va a eliminar el usuario con documento 76859412](documentacion/delete_user_2.PNG)
 
-![Usuario Eliminado](documentacion/user_deleted.png)
+![Usuario Eliminado](documentacion/user_deleted.PNG)
 
-![Cita eliminada para el usuario](documentacion/appointment_deleted_2.png)
+![Cita eliminada para el usuario](documentacion/appointment_deleted_2.PNG)
 
 ### Eliminar una cita
 El proceso de eliminación de la cita se hace por medio del botón "delete" que se encuentra en la lista de todas las citas (para este proceso se debí crear una nueva cita porque en el ejemplo anterior quedo el sistema de citas totalmente vació como se vio en la última imagen).
 
-![Delete Appointment](documentacion/delete_appointment.png)
+![Delete Appointment](documentacion/delete_appointment.PNG)
 
-![Appointment eliminada](documentacion/appointment_deleted_3.png)
+![Appointment eliminada](documentacion/appointment_deleted_3.PNG)
 
 ### Edición de doctor
 Se pueden editar los datos del doctor por medio del botón "Edit" ubicado en la lista general de doctores. 
 
-![Edit Doctor](documentacion/edit_doctor.png)
+![Edit Doctor](documentacion/edit_doctor.PNG)
 
-![Doctor editado (cambio la oficina y el nombre)](documentacion/doctor_edited.png)
+![Doctor editado (cambio la oficina y el nombre)](documentacion/doctor_edited.PNG)
 
 ### Edición de usuario
 Se pueden editar los datos del usuario por medio del botón "Edit" ubicado en la lista general de usuarios. Es importante aclarar que el único parámetro que no se permite editar de un usuario es el número de identificación. 
 
-![Edit User](documentacion/edit_user.png)
+![Edit User](documentacion/edit_user.PNG)
 
-![Usuario editado (cambio la edad y el nombre)](documentacion/user_edited.png)
+![Usuario editado (cambio la edad y el nombre)](documentacion/user_edited.PNG)
 
 ### Edición de una cita
 Se pueden editar los datos de una cita por medio del botón "Edit" ubicado en la lista general de citas. Es importante aclarar que el único parámetro que se permite editar en una cita es la especialidad del médico, el número de identificación del usuario no es permitido editarlo. 
 
-![Edit cita](documentacion/edit_appointment.png)
+![Edit cita](documentacion/edit_appointment.PNG)
 
 Cabe aclarar que si no existe un doctor con la especialidad que se desea editar, no se puede realizar la edición.
 
-![Error en la edición de la cita](documentacion/edit_appointment_error.png)
+![Error en la edición de la cita](documentacion/edit_appointment_error.PNG)
 
 ### Busqueda
 Se puede realizar la busqueda de las citas que se encuentren asignadas para cada paciente de acuerdo a su número de identificación.
 
-![Busqueda de citas por número de documento](documentacion/search.png)
+![Busqueda de citas por número de documento](documentacion/search.PNG)
 
-![Resultado de busqueda por número de documento](documentacion/search_2.png)
+![Resultado de busqueda por número de documento](documentacion/search_2.PNG)
 
 Si el usuario no existe se genera un mensaje que indica que la busqueda realizada no tiene resultados
 
-![Busqueda para cita de usuarios no existentes](documentacion/search_error.png)
+![Busqueda para cita de usuarios no existentes](documentacion/search_error.PNG)
 
 ### Filter 
 Se pueden filtrar las citas por medio de la especialidad.
 
-![Filtrado de citas por especialidad](documentacion/filter.png)
+![Filtrado de citas por especialidad](documentacion/filter.PNG)
 
-![Resultado de filtrado de citas por especialidad](documentacion/filter_2.png)
+![Resultado de filtrado de citas por especialidad](documentacion/filter_2.PNG)
 
 Si no existen citas con la especialidad indicada, el formulario de filtro no tendra las otras especialidades, por ejemplo, solamente hay una cita con la especialidad medicina interna, el formulario mostrara solamente dicha especialidad.
 
-![Desplegable de selección para el filtro](documentacion/filter_3.png)
+![Desplegable de selección para el filtro](documentacion/filter_3.PNG)
 
 
 ## Información personal
