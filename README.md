@@ -233,6 +233,37 @@ Si no existen citas con la especialidad indicada, el formulario de filtro no ten
 
 ![Desplegable de selección para el filtro](documentacion/filter_3.png)
 
+## EndPoints
+### Base
+- /
+- /addDoctor (página creación doctor)
+- /addUser (página creación usuario)
+- /addAppointment (página creación de cita)
+- /searchAppointments (End point para busqueda y filtrado)
+- /userAppointments (busqueda)
+- /specialtyAppointments (filtrado)
+  
+### Doctor
+- /newDoctor (muestra el nuevo doctor creado)
+- /doctors (lista de todos los doctores)
+- /doctor/:id (get a un doctor)
+- /doctor/:id (eliminar un doctor)
+- /doctor/:id (actualizar un doctor)
+
+### User
+- /newUser (muestra nuevo usuario creado)
+- /users (lista de todos los usuarios)
+- /user/:id (obtiene un usuario por el id)
+- /user/:id (Elimina el usuario)
+- /user/:id (Actualiza el usuario)
+
+### Appointment
+- /newAppointment (muestra la nueva cita creada)
+- /appointments (lista todas las citas)
+- /appointment/:id (Solicita la cita)
+- /appointment/:id (Elimina la cita)
+- /appointment/:id (Actualiza la cita)
+
 
 ## Información personal
 Creador: Juan Camilo Ramírez
